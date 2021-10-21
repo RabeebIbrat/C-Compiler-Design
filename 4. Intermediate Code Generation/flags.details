@@ -1,0 +1,45 @@
+
+string tempVarName = "tempVar";
+
+string scopeName = "Scope";
+
+string data_reg = "BX";
+
+string data_reg_2 = "DX";
+
+string index_reg = "SI";
+
+string index_reg_2 = "DI";
+
+bool comments = true;
+
+bool asmDebug = false;
+
+
+*****ADDITIONALS:*****
+
+Tagging: //ASM PART
+
+Possible code improvements: //IMPROVEMENTS HERE
+
+Invalid index for array: <no_index> 
+
+
+*****FREQUENT COPIES:*****
+
+//ASM PART
+
+if(comments) $$->asmCode += ";\n";
+
+$$->asmCode += "
+
+$$->asmCode = $1->asmCode;
+
+		if(asmDebug) {
+			$$->printAsm("", line_count);
+			if($$->varIndex == "<none>")
+				$$->printAsm("", line_count, "variable usage: " + $$->varName + "\n");
+			else
+				$$->printAsm("", line_count, "variable usage: " + $$->varName + "\n"
+							+ "variable index: " + $$->varIndex + "\n");
+		}

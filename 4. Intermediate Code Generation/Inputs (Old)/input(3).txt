@@ -1,0 +1,33 @@
+void foo(int a, float);
+
+int foo;
+
+void foo(int a, float b, int c) {}
+
+void foo(int, float);
+
+void ps4(int, float) {
+	
+}
+
+void ps4();
+
+//void ps4(){}
+
+int mesa(int, float);
+
+int mest(int, int);
+
+void mesa(int, float);
+
+void pera();
+
+int mest(int, void);
+
+void pera(int, int) {
+
+}
+
+int mana(void a, void b, void c) {
+
+}

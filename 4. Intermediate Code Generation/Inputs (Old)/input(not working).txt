@@ -1,0 +1,28 @@
+int x,y,z[9],t[0]; float a;  //1
+
+void foo();
+
+int var(int a, int b){  //5
+	return a+b;
+}
+
+void foo(){
+	int p;
+	x=2;   //11
+	y=x-5;
+}
+
+int main(){
+	int a[2],c,i,j ; float d;  //16
+	a[0]=1;
+	a[1]=5/3;
+	c = !(3);
+	d = a[i] != a[c];
+	i= a[3]+a[a[d]];  //21
+	for(i = 0; a[i] + a[3] < 7; i++) {
+		a[0] = a[0] + a[1];
+	}
+	j= 2*3+(5%3 < 4 && 8) || 2 ;  //25
+	//d=var(1,2*3)+3.5*2;
+	return 0;
+}

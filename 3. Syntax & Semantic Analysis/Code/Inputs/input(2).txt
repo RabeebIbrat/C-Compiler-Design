@@ -1,0 +1,20 @@
+int a,b[3],c,b,d[5],e[0];  float ca[2], artemis, into;
+
+void haha(int a, float b);
+
+int mama(int c, float c);
+
+int none();
+
+float test(int, float c, int, void);
+
+{
+	int mazendro; float c;
+	{
+		int arra[3];
+	}
+}
+
+{
+	int c, ca;
+}

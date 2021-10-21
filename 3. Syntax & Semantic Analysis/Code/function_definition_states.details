@@ -1,0 +1,13 @@
+defined & declared <defNdeclare>
+
+declared:
+	multiple declaration <mulDeclare> (previously declared as a different type)
+	multiple definition <mulDef>
+	unmatched number of arguments <manyLessArgs>
+	unmatched argument list <unmatchedArgs>
+	correct definition <define>
+	
+	
+		<Check flags>
+	paramExists->empty()
+	unnamed_parameter

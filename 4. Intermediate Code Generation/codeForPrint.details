@@ -1,0 +1,77 @@
+
+
+PRINT_NUMBER PROC
+
+;PRINTING THE NUMBER
+    
+    MOV LEFTP,0;
+    MOV SI,0;
+
+GET_DIGIT:
+
+    CMP SI,8;
+    JG PRINT_FINAL;
+    
+    MOV DX,0;
+    MOV AX,NUMBER;
+    DIV B10+SI;
+    
+    ;[QUOTIENT IN AX]
+    
+    MOV DX,0;
+    MOV BX,10;
+    DIV BX;
+    MOV AX,DX;
+    ;[REMAINDER IN AX] 
+    
+    ADD SI,2;
+    
+    ;CHECK IF DIGIT IS ZERO AND LEFTMOST
+    CMP AX,0;
+    JNE PRINT_DIGIT;
+    
+    CMP LEFTP,0;
+    JNE PRINT_DIGIT;
+    
+    JMP GET_DIGIT;  
+    
+    
+PRINT_DIGIT:
+    
+    MOV LEFTP,1;
+    
+    ADD AL,48;
+    ;[REMAINDER AS CHAR IN AL, AH = 0]
+    
+    ;PRINT DIGIT
+    MOV DL,AL;
+    MOV AH,2;
+    INT 21H;
+    
+    JMP GET_DIGIT;
+
+PRINT_FINAL:
+    
+	;IF NOTHING PRINTED, PRINT 0
+	CMP LEFTP,0;
+	JNE PRINT_DONE;
+	
+	MOV DL,48;
+    MOV AH,2;
+    INT 21H;
+
+PRINT_DONE:
+    
+    ;NEW LINE
+    MOV AH,2
+    MOV DL,LF;
+    INT 21H;
+    
+    MOV DL, CR;
+    INT 21H;
+	
+	;RETURNING
+	RET
+	
+PRINT_NUMBER ENDP
+ 

@@ -1,0 +1,10 @@
+void foo(int, float);
+
+void foo(int a, float c){
+	
+	//x=2;
+	
+	y=x-5;
+
+}
+

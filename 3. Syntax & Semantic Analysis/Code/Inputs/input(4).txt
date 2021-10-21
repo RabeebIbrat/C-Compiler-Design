@@ -1,0 +1,10 @@
+void foo(int a, int b) {
+	int ap,bp,cp;
+	float d;
+}
+
+void haa(){}
+
+int main(int a, float b, void c) {
+	
+}
